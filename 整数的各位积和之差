@@ -1,0 +1,12 @@
+给你一个整数 n，请你帮忙计算并返回该整数「各位数字之积」与「各位数字之和」的差。
+
+class Solution:
+    def subtractProductAndSum(self, n: int) -> int:
+        list1 = list(str(n))
+        chengfa = 1
+        sum1 = 0
+        for i in list1:
+            i = int(i)
+            sum1 += i
+            chengfa *= i
+        return chengfa - sum1
